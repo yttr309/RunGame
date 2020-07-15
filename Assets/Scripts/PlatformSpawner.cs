@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections.Specialized;
+using System.Security.Cryptography;
+using UnityEngine;
 
 // 발판을 생성하고 주기적으로 재배치하는 스크립트
 public class PlatformSpawner : MonoBehaviour {
@@ -19,9 +21,18 @@ public class PlatformSpawner : MonoBehaviour {
     private Vector2 poolPosition = new Vector2(0, -25); // 초반에 생성된 발판들을 화면 밖에 숨겨둘 위치
     private float lastSpawnTime; // 마지막 배치 시점
 
+    public GameObject Platform_Long;
+
 
     void Start() {
+        Invoke("create", 3f);
         // 변수들을 초기화하고 사용할 발판들을 미리 생성
+    }
+
+    void create()
+    {
+        Instantiate(Platform_Long);
+        Instantiate(Platform_Long, new Vector3(1, 1, 1), transform.rotation);
     }
 
     void Update() {
