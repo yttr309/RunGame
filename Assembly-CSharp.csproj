@@ -61,7 +61,6 @@
      <Compile Include="Assets\Scripts\Platform.cs" />
      <Compile Include="Assets\Scripts\PlatformSpawner.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
-     <Compile Include="Assets\Scripts\Sc.cs" />
      <Compile Include="Assets\Scripts\ScrollingObject.cs" />
      <None Include="Assets\Font\License.txt" />
  <Reference Include="UnityEngine">

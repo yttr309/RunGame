@@ -42,6 +42,7 @@ public class PlayerController : MonoBehaviour {
    }
 
    private void Die() {
+        ScrollingObject.speed = 0.06f;
         animator.SetTrigger("Die");
 
         playerAudio.clip = deathClip;
